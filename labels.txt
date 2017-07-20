@@ -1,0 +1,4 @@
+0:blotches
+1:normal
+2:speckles
+3:sss
