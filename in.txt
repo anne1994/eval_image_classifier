@@ -1,1 +1,3 @@
-/data/tmp/test/test_images/
+/data/tmp/test/test_images/tile1.jpg
+/data/tmp/test/test_images/tile2.jpg
+/data/tmp/test/test_images/tile3.jpg
