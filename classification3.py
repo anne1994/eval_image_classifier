@@ -16,7 +16,7 @@ tf.app.flags.DEFINE_boolean('tfrecord',False, 'Input file is formatted as TFReco
 tf.app.flags.DEFINE_string('outfile',None, 'Output file for prediction probabilities.')
 tf.app.flags.DEFINE_string('model_name', 'inception_v3', 'The name of the architecture to evaluate.')
 tf.app.flags.DEFINE_string('preprocessing_name', None, 'The name of the preprocessing to use. If left as `None`, then the model_name flag is used.')
-tf.app.flags.DEFINE_string('checkpoint_path', '/data/tmp/prescan-models-train/inception_v3','The directory where the model was written to or an absolute path to a checkpoint file.')
+tf.app.flags.DEFINE_string('checkpoint_path', '/data/tmp/models-train/inception_v3','The directory where the model was written to or an absolute path to a checkpoint file.')
 tf.app.flags.DEFINE_integer('eval_image_size', None, 'Eval image size.')
 tf.app.flags.DEFINE_string('model_dir','/data/models/slim', ' model dir')
 FLAGS = tf.app.flags.FLAGS
@@ -62,30 +62,8 @@ class NodeLookup(object):
     """
     if not tf.gfile.Exists(uid_lookup_path):
       tf.logging.fatal('File does not exist %s', uid_lookup_path)
-    #if not tf.gfile.Exists(label_lookup_path):
-     # tf.logging.fatal('File does not exist %s', label_lookup_path)
-
-    # Loads mapping from string UID to human-readable string
-    #proto_as_ascii_lines = tf.gfile.GFile(uid_lookup_path).readlines()
-    #uid_to_human = {}
-    #p = re.compile(r'[n\d]*[ \S,]*')
-    #for line in proto_as_ascii_lines:
-      #parsed_items = p.findall(line)
-      #uid = parsed_items[0]
-      #human_string = parsed_items[2]
-      #uid_to_human[uid] = human_string
-
-    #Loads mapping from string UID to integer node ID.
-    #node_id_to_uid = {}
-    #proto_as_ascii = tf.gfile.GFile(label_lookup_path).readlines()
-    #for line in proto_as_ascii:
-      #if line.startswith('  target_class:'):
-        #target_class = int(line.split(': ')[1])
-      #if line.startswith('  target_class_string:'):
-        #target_class_string = line.split(': ')[1]
-        #node_id_to_uid[target_class] = target_class_string[1:-2]
-
-    #Loads mapping from string UID to integer node ID.
+  
+    #Loads mapping from string uid/label integer ID.
     node_id_to_uid = {}
     proto_as_ascii = tf.gfile.GFile(uid_lookup_path).readlines()
     for line in proto_as_ascii:
