@@ -1,4 +1,4 @@
 image	 	 class0  	 	 class1  	 	 class2  	 	 class3  	 	 predicted_class	 	 predicted_class_name
-tile1.jpg	 	  0.00577441	 	  0.034935	 	  0.853096	 	  0.106194	 	  2	 	  speckles
-tile2.jpg	 	  0.000459435	 	  0.00865586	 	  0.0286004	 	  0.962284	 	  3	 	  sss
-tile3.jpg	 	  0.00231375	 	  0.000911754	 	  0.0083337	 	  0.988441	 	  3	 	  sss
+tile1.jpg	 	  0.00577441	 	  0.034935	 	  0.853096	 	  0.106194	 	  2	 	  cat
+tile2.jpg	 	  0.000459435	 	  0.00865586	 	  0.0286004	 	  0.962284	 	  3	 	  dog
+tile3.jpg	 	  0.00231375	 	  0.000911754	 	  0.0083337	 	  0.988441	 	  3	 	  lion
