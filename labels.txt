@@ -1,4 +1,4 @@
-0:blotches
+0:label1
 1:normal
-2:speckles
-3:sss
+2:label2
+3:label3
